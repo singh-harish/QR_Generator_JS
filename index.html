@@ -1,15 +1,33 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
-  <head>
-    <meta charset="utf-8">
-    <title>QR CODE GENERATOR</title>
-  </head>
-  <body>
 
-    <textarea name="" id="textarea" rows="8" cols="80"></textarea>
+<head>
+  <meta charset="utf-8">
+  <title>QR CODE GENERATOR</title>
+  <link rel="stylesheet" href="style.css">
+</head>
 
-    <input type="button" name="" value="Click Me" onclick="showIt()">
-    
-    <script src="app.js" charset="utf-8"></script>
-  </body>
+<body>
+  <div class="grid">
+
+    <h2 align="center">QR CODE GENERATOR</h2>
+    <img src="" id="img">
+
+    <select id="size" name="">
+      <option value="100">100 x 100</option>
+      <option value="150">150 x 150</option>
+      <option value="256" selected>256 x 256</option>
+      <option value="512">512 x 512</option>
+    </select>
+    <br>
+
+    <textarea name="" placeholder="Enter Your Text" id="qrtext" rows="8" cols="80"></textarea>
+    <br>
+
+    <input type="submit" name="" value="Generate" onclick="genQR()">
+  </div>
+
+  <script src="app.js" charset="utf-8"></script>
+</body>
+
 </html>
